@@ -87,7 +87,7 @@ variable "ami_env_tag_filter" {
 
 variable "ami_owners" {
   description = "AWS Account Ids that will be searched for the AMI. Defaults to self, which is the current AWS account"
-  default = "self"
+  default     = "self"
 }
 
 # elasticsearch.yml settings
