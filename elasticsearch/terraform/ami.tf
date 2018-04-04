@@ -2,11 +2,11 @@
 
 data "aws_ami" "elasticsearch_ami" {
   most_recent = true
-  owners      = ["self"]
+  owners      = ["${var.ami_owners}"]
   name_regex  = "^pelias-elasticsearch-\\d{3}"
 
   filter {
     name   = "tag:env"
-    values = ["production"]
+    values = ["${var.ami_env_tag_filter}"]
   }
 }

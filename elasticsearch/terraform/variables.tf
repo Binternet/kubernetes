@@ -85,6 +85,11 @@ variable "ami_env_tag_filter" {
   default = "production"
 }
 
+variable "ami_owners" {
+  description = "AWS Account Ids that will be searched for the AMI. Defaults to self, which is the current AWS account"
+  default = "self"
+}
+
 # elasticsearch.yml settings
 
 variable "elasticsearch_data_dir" {
